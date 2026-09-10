@@ -1,0 +1,11 @@
+{
+  "$schema": "https://iamjason.github.io/hyrule-compendium-site/schema/hyrule.schema.json",
+  "name": "Cosmo",
+  "command": "cosmo",
+  "tagline": "Reclaims the space developer caches, build artifacts, and simulators leave behind on your Mac.",
+  "status": "beta",
+  "language": "Swift",
+  "icon": "https://iamjason.github.io/cosmo-site/assets/icon.png",
+  "platforms": ["macos"],
+  "docs": "https://iamjason.github.io/cosmo-site/"
+}

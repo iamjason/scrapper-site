@@ -1,5 +1,5 @@
 <svg viewBox="0 0 220 170" width="440" height="340" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-  <!-- Cosmo mid-molt: walking away from the shed husk -->
+  <!-- Cosmo the janitor mid-molt: sweeping away from the shed husk -->
   <rect width="220" height="170" fill="#131127"/>
   <!-- shed husk ghost -->
   <g opacity="0.3">
@@ -12,13 +12,18 @@
   <rect x="156" y="34" width="6" height="6" fill="#ffd166"/>
   <rect x="196" y="78" width="6" height="6" fill="#ffd166"/>
   <rect x="168" y="124" width="6" height="6" fill="#ffd166"/>
-  <!-- body -->
-  <rect x="40" y="34" width="84" height="12" fill="#b8a6e8"/>
-  <rect x="28" y="46" width="108" height="58" fill="#b8a6e8"/>
-  <rect x="40" y="104" width="96" height="12" fill="#9784cc"/>
+  <!-- push broom: brush on the ground, handle leaning into the body (mirrors CosmoView sideBody) -->
+  <rect x="14" y="132" width="30" height="8" fill="#ffd166"/>
+  <rect x="14" y="140" width="30" height="4" fill="#e0b84d"/>
+  <rect x="36" y="116" width="6" height="18" fill="#ffd166"/>
+  <rect x="40" y="100" width="6" height="16" fill="#ffd166"/>
+  <!-- body (warm lavender) -->
+  <rect x="40" y="34" width="84" height="12" fill="#c5a8dd"/>
+  <rect x="28" y="46" width="108" height="58" fill="#c5a8dd"/>
+  <rect x="40" y="104" width="96" height="12" fill="#a386c2"/>
   <!-- segments -->
-  <rect x="72" y="46" width="4" height="58" fill="#9784cc"/>
-  <rect x="102" y="46" width="4" height="58" fill="#9784cc"/>
+  <rect x="72" y="46" width="4" height="58" fill="#a386c2"/>
+  <rect x="102" y="46" width="4" height="58" fill="#a386c2"/>
   <!-- bubble helmet -->
   <rect x="28" y="42" width="48" height="4" fill="#dff3ff" opacity=".8"/>
   <rect x="24" y="46" width="4" height="40" fill="#dff3ff" opacity=".8"/>
@@ -29,8 +34,8 @@
   <rect x="44" y="59" width="5" height="5" fill="#ffffff"/>
   <rect x="42" y="82" width="14" height="4" fill="#241d3d"/>
   <!-- legs mid-stride -->
-  <rect x="42" y="116" width="14" height="18" fill="#9784cc"/>
-  <rect x="70" y="122" width="14" height="12" fill="#9784cc"/>
-  <rect x="98" y="116" width="14" height="18" fill="#9784cc"/>
-  <rect x="122" y="122" width="14" height="12" fill="#9784cc"/>
+  <rect x="42" y="116" width="14" height="18" fill="#a386c2"/>
+  <rect x="70" y="122" width="14" height="12" fill="#a386c2"/>
+  <rect x="98" y="116" width="14" height="18" fill="#a386c2"/>
+  <rect x="122" y="122" width="14" height="12" fill="#a386c2"/>
 </svg>

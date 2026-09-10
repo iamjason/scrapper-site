@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cosmo — reclaim the space your dev tools left behind</title>
-<meta name="description" content="A Mac cleaner for developers. Find the Xcode, simulator, AI tool, and package manager caches hiding in System Data — and move them to Trash, safely.">
-<link rel="icon" type="image/svg+xml" href="mascot/cosmo-hero.svg">
+<meta name="description" content="Reclaim space on your Mac with Cosmo. Find developer caches, build artifacts, and simulator data, review the consequences, and choose what to clean.">
+<link rel="icon" type="image/png" href="assets/icon.png">
 <style>
   :root {
     --navy: #131127;
@@ -52,7 +52,8 @@
   }
   .btn.primary { background: var(--lavender); color: var(--navy); }
   .btn:hover { transform: translate(2px, 2px); box-shadow: 3px 3px 0 #241d3d; }
-  .note { color: var(--dim); font-size: 12px; margin-top: 14px; }
+  .note { color: var(--dim); font-size: 14px; margin-top: 14px; }
+  a:focus-visible { outline: 3px solid var(--gold); outline-offset: 5px; }
 
   .shot { margin: 56px 0; text-align: center; }
   .shot img {
@@ -66,17 +67,17 @@
     color: var(--gold); font-size: 22px; letter-spacing: 2px;
     text-align: center; margin: 64px 0 28px;
   }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 18px; }
   .cell {
     background: var(--navy-2); border: 2px solid #2a2547; padding: 22px;
     box-shadow: 4px 4px 0 #0b0a18;
   }
   .cell h3 { color: var(--lavender); font-size: 16px; margin-bottom: 8px; }
-  .cell p { color: var(--dim); font-size: 13.5px; }
+  .cell p { color: var(--dim); font-size: 16px; overflow-wrap: anywhere; }
   .cell .big { color: var(--mint); font-size: 28px; font-weight: 800; display: block; margin-bottom: 6px; }
 
   .badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 22px 0; }
-  .badge { font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 99px; }
+  .badge { font-size: 14px; font-weight: 700; padding: 4px 12px; border-radius: 99px; }
   .b-safe { background: #143d2b; color: #5fe3a1; }
   .b-quit { background: #3d3414; color: #e3c95f; }
   .b-rebuild { background: #3d2714; color: #e3995f; }
@@ -94,32 +95,46 @@
 </style>
 </head>
 <body>
-<canvas class="stars" id="stars"></canvas>
+<canvas class="stars" id="stars" aria-hidden="true"></canvas>
 <main>
   <section class="hero">
-    <img class="cosmo" src="mascot/cosmo-hero.svg" alt="Cosmo, the pixel-art space tardigrade mascot">
+    <img class="cosmo" src="mascot/cosmo-hero.svg" alt="Cosmo, the pixel-art janitor space-tardigrade mascot with a broom">
     <h1>COSMO</h1>
     <p class="tagline">Reclaim the space your dev tools left behind.</p>
-    <p class="subtag">A Mac cleaner for developers — starring a space tardigrade who has survived worse than your full disk.</p>
+    <p class="subtag">The free Mac cleaner for developers — starring a space tardigrade who has survived worse than your full disk.</p>
+    <!-- release:start -->
     <div class="buttons">
-      <a class="btn primary" href="https://github.com/iamjason/cosmo-site/releases/latest">↓ Download for Mac</a>
+      <a class="btn primary" href="https://github.com/iamjason/cosmo-site/releases/download/v0.3.1/Cosmo-0.3.1.zip">↓ Download for macOS · v0.3.1</a>
+      <a class="btn" href="https://github.com/iamjason/cosmo-site/releases/tag/v0.3.1">Release notes</a>
     </div>
-    <p class="note">macOS 26+ · Signed and notarized by Apple — download, unzip, open.</p>
+    <p class="note">macOS 26+ · 1.8 MB · free to use<br>
+      Released <time datetime="2026-09-10">September 10, 2026</time>. Download, unzip, and move Cosmo.app to Applications.</p>
+    <!-- release:end -->
   </section>
 
   <figure class="shot">
     <img src="cosmo-demo.gif" alt="Cosmo walking across the window during a scan, then revealing 461 GB of reclaimable developer caches">
-    <figcaption>461 GB found on a real development Mac — Cosmo scans, you review, everything lands in the Trash.</figcaption>
+    <figcaption>461 GB found on a real development Mac. Cosmo scans; you review what to keep and what to clean.</figcaption>
   </figure>
 
   <h2 class="section">WHAT'S HIDING IN SYSTEM DATA</h2>
   <div class="grid">
-    <div class="cell"><span class="big">152</span><h3>cleanup targets</h3>
+    <div class="cell"><span class="big">156</span><h3>cleanup targets</h3>
       <p>Xcode DerivedData and device support, simulator runtimes, npm/pnpm/bun, Docker, Gradle, JetBrains — and your projects' node_modules, venvs, and Rust target dirs.</p></div>
-    <div class="cell"><span class="big">18</span><h3>categories</h3>
+    <div class="cell"><span class="big">19</span><h3>categories</h3>
       <p>Including the ones other cleaners miss: Claude Code, Cursor, Codex sessions, Ollama and LM Studio models, Hugging Face caches, Playwright browsers.</p></div>
     <div class="cell"><span class="big">2</span><h3>ways to clean</h3>
-      <p>A native SwiftUI app with a clickable storage map, and a scriptable CLI: <code>cosmo scan --json</code>, <code>cosmo clean --all-safe</code>.</p></div>
+      <p>A native SwiftUI app with a storage map, plus a scriptable CLI for scanning and cleanup. The download above contains the Mac app.</p></div>
+  </div>
+
+  <h2 class="section">PICK UP WHERE YOU LEFT OFF</h2>
+  <div class="grid">
+    <div class="cell"><h3>Scan once. Refresh what changed.</h3>
+      <p>Reopen saved results, see when folders change, and refresh one target, a category, or the whole scan. Cancel a scan whenever you need to.</p></div>
+    <div class="cell"><h3>Keep the work that matters</h3>
+      <p>Search by project, simulator, size, or activity evidence. Protect individual items or entire projects, and review growth since your last scan.</p></div>
+    <div class="cell"><h3>Follow every cleanup</h3>
+      <p>Review each item's removal method before confirming. Track progress, revisit cleanup history, and retry items that could not be removed.</p></div>
   </div>
 
   <h2 class="section">EVERY TARGET, HONESTLY LABELED</h2>
@@ -127,20 +142,23 @@
     <span class="badge b-safe">Safe</span>
     <span class="badge b-quit">Quit first</span>
     <span class="badge b-rebuild">Rebuilds</span>
-    <span class="badge b-destr">Review</span>
+    <span class="badge b-destr">Destructive</span>
   </div>
   <div class="grid">
-    <div class="cell"><h3>Trash, not rm -rf</h3>
-      <p>Everything goes to the Trash by default — restorable until you empty it. Permanent deletion is opt-in, and destructive items are never pre-selected.</p></div>
-    <div class="cell"><h3>Explained, not magic</h3>
-      <p>Every target says what it is and what happens after removal. Filter to things untouched for 30/60/90 days. Pick individual items, whole targets, or categories.</p></div>
+    <div class="cell"><h3>Trash by default</h3>
+      <p>Files move to Trash unless you choose permanent deletion. Simulator devices and runtimes are removed permanently through Apple's simulator tools; the review identifies them separately.</p></div>
+    <div class="cell"><h3>Know what happens next</h3>
+      <p>Every target explains what it is and what removal means. Destructive targets hold real data, such as archives, models, or session history, and are excluded from safe-only cleanup.</p></div>
     <div class="cell"><h3>Guard rails everywhere</h3>
-      <p>The cleaner refuses paths outside your home, skips apps that are still running, and only flags project artifacts proven by their manifest — a folder named target without a Cargo.toml is left alone.</p></div>
+      <p>Cosmo rechecks selected items before cleanup, skips targets while their tools are running, and refuses file paths outside your home. Version-aware selection helps retain recent simulator runtimes and tool versions.</p></div>
   </div>
 
   <footer>
-    <span class="label">Tardigrade fact</span><br>
-    <span id="tardifact"></span>
+    <p><a href="https://github.com/iamjason/cosmo-site/issues">Report an issue</a> · <a href="https://github.com/iamjason/cosmo-site/releases">All releases</a> · <a href="https://iamjason.github.io/hyrule-compendium-site/tools/cosmo/">Hyrule Compendium</a></p>
+    <p style="margin-top:18px;">
+      <span class="label">Tardigrade fact</span><br>
+      <span id="tardifact"></span>
+    </p>
   </footer>
 </main>
 <script>
@@ -197,7 +215,7 @@
       ctx.fillRect(px | 0, py | 0, size | 0 || 1, size | 0 || 1);
     }
     ctx.globalAlpha = 1;
-    requestAnimationFrame(frame);
+    if (!reduced) requestAnimationFrame(frame);
   }
   init();
   requestAnimationFrame(frame);
