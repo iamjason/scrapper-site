@@ -1,18 +1,18 @@
-# Cosmo
+# Scrapper
 
-<img src="https://iamjason.github.io/cosmo-site/assets/icon.png" width="128" height="128" alt="Cosmo's space-tardigrade app icon">
+<img src="https://iamjason.github.io/scrapper-site/assets/icon.png" width="128" height="128" alt="Scrapper’s Brazilian green and gold robot app icon">
 
 **Reclaim the space your dev tools left behind.**
 
-Cosmo is a free native Mac app for finding developer caches, build artifacts,
+Scrapper is a free native Mac app for finding developer caches, build artifacts,
 and simulator data. Review what is taking up space, understand what removal
 means, and choose what to clean.
 
-[Download the latest release](https://github.com/iamjason/cosmo-site/releases/latest)
-· [Website](https://iamjason.github.io/cosmo-site/)
-· [Report an issue](https://github.com/iamjason/cosmo-site/issues)
+[Download the latest release](https://github.com/iamjason/scrapper-site/releases/latest)
+· [Website](https://iamjason.github.io/scrapper-site/)
+· [Report an issue](https://github.com/iamjason/scrapper-site/issues)
 
-Requires **macOS 26 or later**. Download the ZIP, move **Cosmo.app** to
+Requires **macOS 26 or later**. Download the ZIP, move **Scrapper.app** to
 Applications, and open it. Releases are signed with Developer ID and notarized
 by Apple.
 
@@ -33,16 +33,16 @@ Every target has a plain-English explanation and a safety label: **Safe**,
 **Quit first**, **Rebuilds**, or **Destructive**. Files move to Trash by default
 and can be restored until you empty it. Permanent file deletion is opt-in.
 Simulator devices and runtimes are removed permanently through Apple's
-simulator tools; Cosmo identifies those items separately before confirmation.
+simulator tools; Scrapper identifies those items separately before confirmation.
 Destructive targets are never included in safe-only cleanup.
 
-Cosmo revalidates selected items, skips targets while their declared tools are
+Scrapper revalidates selected items, skips targets while their declared tools are
 running, and refuses file paths outside your home directory.
 
 ## Part of the Compendium
 
-Find Cosmo alongside Korok, Deku, and Kaepora in the
-[Hyrule Compendium](https://iamjason.github.io/hyrule-compendium-site/tools/cosmo/).
+Find Scrapper alongside Korok, Deku, and Kaepora in the
+[Hyrule Compendium](https://iamjason.github.io/hyrule-compendium-site/tools/scrapper/).
 The Compendium discovers this public repository through its `hyrule-tool` topic
 and reads [hyrule.json](hyrule.json) for the listing, icon, and website.
 
