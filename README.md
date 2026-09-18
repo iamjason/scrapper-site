@@ -48,3 +48,7 @@ and reads [hyrule.json](hyrule.json) for the listing, icon, and website.
 
 This repository hosts public information, artwork, and release downloads.
 Application source is maintained separately.
+
+## Usage statistics
+
+This site records anonymous usage statistics: page views, download clicks and a daily visitor count derived from a hash of your IP address and browser. No cookies, no personal data, nothing stored in your browser. The collector is [Gossip Stone](https://github.com/iamjason/gossip-stone-swift#what-is-sent).
